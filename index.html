@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <!-- Matthew Pezzente -->
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <title>Canvas Project</title>
+</head>
+<body>
+  <header>
+  </header>
+  <main>
+    <canvas class="canvas-chart-line"></canvas>
+    <form class="main-form">
+      <legend>Add Animal to Zoo</legend>
+      <div class="group">
+        <label>Animal: </label>
+        <select data-zoo="animal">
+          <option>Lion</option>
+          <option>Owl</option>
+          <option>Dolphin</option>
+        </select>
+        <label>Name: </label>
+        <input class="txt-name" type="text" data-zoo="animal" />      
+        <label class="lbl-weight">Weight (kg): </label>
+        <input class="txt-weight" type="number" data-zoo="animal" />
+        <button class="btn-add" type="submit">Add Animal</button>
+      </div>
+    </form>
+    <form class="main-form">
+      <legend>Change Zoo</legend>
+      <div class="group">
+        <label>Zoo: </label><input class="txt-zoo" type="text" data-zoo="zoo" value="Central Park Zoo" />
+        <button class="btn-update" type="submit">Update Zoo</button>
+      </div>
+    </form>
+  </main>
+  <section class="content">
+    <h1>Zoo Animals</h1>
+    <table class="zoo-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>ID</th>
+          <th>Species</th>
+          <th>Weight (kg)</th>
+          <th>Zoo</th>
+        </tr>
+      </thead>
+      <tbody class="zoo-tbody">
+      </tbody>
+    </table>
+  </section>
+  <footer>
+  </footer>
+  <script type="text/javascript" src="js/utils.js"></script>
+  <script type="text/javascript" src="js/animal.js"></script>
+  <script type="text/javascript" src="js/graphs.js"></script>
+  <script type="text/javascript" src="js/factory.js"></script>
+  <script type="text/javascript" src="js/singleton.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

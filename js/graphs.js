@@ -2,6 +2,8 @@ class LineChart {
 	constructor(canvas) {
 		this.canvas = canvas
 		this.createChart()
+		this.chartGrowthFactor = 1
+		this.moduloNumber = 20
 	}
 
 	createChart() {
@@ -12,7 +14,7 @@ class LineChart {
 		ctx.beginPath()
 		ctx.moveTo(leftPadding, 25)
 		ctx.lineTo(leftPadding, 125)
-		ctx.lineTo(250, 125)
+		ctx.lineTo(255, 125)
 		ctx.stroke()
 		ctx.closePath()
 
@@ -33,11 +35,15 @@ class LineChart {
 		this.createChart()
 		let ctx = this.canvas.getContext('2d')
 		let leftPadding = 75
-		let growthRate = 10
+		let growthRate = 9
+		growthRate = growthRate / this.chartGrowthFactor
+		let maxLength = 255
 
-		for(let count in objects) {
-			if (objects[count] > 20) {
-				growthRate = 5
+		for(let animalCount in objects) {
+			if (this.moduloNumber / objects[animalCount] == 1) {
+				this.moduloNumber += 20
+				this.chartGrowthFactor += 1
+				break
 			}
 		}
 

@@ -35,7 +35,7 @@ table {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
-.canvas-chart-line, .main-form, .main-form .group, .main-form button, .content {
+.flex-col-2, .canvas-chart-line, .main-form, .main-form .group, .main-form button, .content {
   margin-left: auto;
   margin-right: auto; }
 
@@ -57,11 +57,32 @@ h1 {
 th {
   font-size: 1.125rem; }
 
+.flex-col-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  max-width: 1100px;
+  background: #333; }
+
 .canvas-chart-line {
   display: block;
   margin-bottom: 1rem;
-  width: 400px;
-  height: 300px;
+  width: 350px;
+  height: 200px;
   background: #eee;
   border: 5px solid #333; }
 
@@ -80,7 +101,6 @@ th {
           justify-content: center;
   margin-bottom: 1rem;
   padding: 1rem;
-  background: #333;
   max-width: 400px; }
   .main-form legend {
     width: 100%;
